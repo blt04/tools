@@ -53,9 +53,9 @@ cat <<EndOfHeader
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssbase/base-min.css">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssfonts/fonts-min.css">
     <style type="text/css" media="all">
-      body { background-color: #EEE; }
+      body { background-color: #EEE; margin: 0 15px; }
       #page {
-        width: 960px;
+        max-width: 960px;
         background-color: white;
         margin: 2em auto;
         padding: 1em 2em 2em 2em;
