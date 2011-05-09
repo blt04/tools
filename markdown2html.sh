@@ -43,6 +43,7 @@
 
 DEFAULT_TITLE=$(basename $1 ".markdown")
 TITLE=${TITLE:-$DEFAULT_TITLE}
+MARKDOWN=$(which markdown)
 
 cat <<EndOfHeader
 <!DOCTYPE html>
@@ -91,7 +92,11 @@ cat <<EndOfHeader
     <div id="page">
 EndOfHeader
 
-/usr/bin/markdown $@
+if [ -x $MARKDOWN ] ; then
+    $MARKDOWN $@
+else
+    echo "Cannot find markdown binary!"
+fi
 
 cat <<EndOfFooter
     </div>
